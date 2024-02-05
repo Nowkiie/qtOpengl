@@ -5,6 +5,7 @@
 
 #include <QWidget>
 #include <QSlider>
+#include <qtimer.h>
 
 namespace Ui {
 class Window;
@@ -23,6 +24,7 @@ protected:
 
 private:
     Ui::Window *ui;
+    
 };
 
 #endif // WINDOW_H
