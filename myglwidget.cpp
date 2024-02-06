@@ -11,11 +11,16 @@ MyGLWidget::MyGLWidget(QWidget *parent)
     z = 0;
 }
 
-//void MyGLWidget::changeZ(int value)
-//{
-//    z += 0.01;
-//    updateGL();
-//}
+void MyGLWidget::changeZ(int value)
+{
+    if (m_angle == 360)
+    {
+        m_angle = 60;
+    }
+    m_angle += 1;
+    
+    updateGL();
+}
 
 MyGLWidget::~MyGLWidget()
 {
@@ -76,9 +81,9 @@ void MyGLWidget::paintGL()
 
     // Reset the transformation matrix
     glLoadIdentity();
-
+    glScaled(0.5, 0.5, 0.5);
     // In order to view the convenience of the view
-    glRotatef(m_angle, 1.0, 0.0, 0.0);
+    glRotatef(60, 1.0, 0.0, 0.0);
     glRotatef(m_angle, 0.0, 1.0, 0.0);
 
     glEnable(GL_TEXTURE_2D);

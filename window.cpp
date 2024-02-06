@@ -12,7 +12,7 @@ Window::Window(QWidget *parent) :
 {
     ui->setupUi(this);
    
-   // connect(ui->rotXSlider, &QSlider::valueChanged, ui->myGLWidget, &MyGLWidget::changeZ);
+    connect(ui->rotXSlider, &QSlider::valueChanged, ui->myGLWidget, &MyGLWidget::changeZ);
   
 }
 

@@ -39,7 +39,7 @@ private:
     QVector<CubePoint> m_data;
 
 public slots:
-    //void changeZ(int value);
+    void changeZ(int value);
 };
 
 #endif // MYGLWIDGET_H
